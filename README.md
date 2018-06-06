@@ -25,7 +25,7 @@ Redis Streams were just released and so it might be useful to write some connect
 |4.1|Service level availability|It needs to be possible to loose a connector service node|
 |4.2|Data availability|The service needs to be able to deal with temp. failures on the Redis side|
 
-## Design
+## Implementation Idea
 
 The following components can be derived from the above mentioned requirments
 
