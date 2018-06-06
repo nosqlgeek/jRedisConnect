@@ -31,30 +31,49 @@ The following components can be derived from the above mentioned requirments
 
 |Service||
 |---|---|
-|...|...|
-|---|---|
-|...|...|
-
+|- connectors|List<Connectors>|
+|- scheduler|Scheduler|
+|- config|Configuration|
+|+ start()|Boolean|
+|+ stop()|Boolean|
+|+ reschedule(Scheduler sched)|Boolean|
 
 |Connector||
 |---|---|
-|...|...|
+|- filters|List<Filter>|
+|- converters|List<Converter>|  
+|- config|Configuration|
+|+ connect()|Boolean|
+|+ reconnect()|Boolean|
+|+ disable()|Boolean|
 
-|Execution Scheduler||
+
+|Scheduler||
 |---|---|
-|...|...|
+|- isTimed|Boolean|
+|- isCronBased|Boolan|
+|- startTime|Date|
+|- endTime|Date|
+|- cronExpr|Expr|
+|+ getSchedule()|Schedule|
+|+ run()|Boolean|
+
 
 |Configuration||
 |---|---|
-|...|...|
+|Setting|List<Setting>|
+
+|Element||
+|---|---|
+|- properties|HashMap|
 
 |Filter||
 |---|---|
-|...|...|
+|- filter(Object)|Boolean|
 
 |Converter||
 |---|---|
-|...|...|
+|- convert(Object)|Element|
 
 |Cluster||
 |---|---|
