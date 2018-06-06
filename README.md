@@ -54,6 +54,7 @@ The following components can be derived from the above mentioned requirments
 |- isCronBased|Boolan|
 |- startTime|Date|
 |- endTime|Date|
+|- interval|Time|
 |- cronExpr|Expr|
 |+ getSchedule()|Schedule|
 |+ run()|Boolean|
