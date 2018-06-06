@@ -10,7 +10,7 @@ Redis Streams were just released and so it might be useful to write some connect
 |---|---|---|
 |0|Connector Service|General requirements for a Connector service|
 |0.1|Standalone|It should be possible to run jRedisConnect in a service/daemon mode|
-|0.2|Tenancy|A Redis connect service should be able to runn multiple connectors the same time|
+|0.2|Tenancy|A Redis connect service should be able to run multiple connectors the same time|
 |0.3|Scheduled termination|For testing purposes it should be possible to run the service for just a few seconds and then terminate|
 |1|Configuration|
 |1.1|Declarative|It needs to possible to declare how the connector should behave|
@@ -27,15 +27,42 @@ Redis Streams were just released and so it might be useful to write some connect
 
 ## Design
 
-The following classes can be derived from the above mentioned requirments
+The following components can be derived from the above mentioned requirments
+
+|Service||
+|---|---|
+|...|...|
+
+--> 1 ..n -->
 
 |Connector||
 |---|---|
 |...|...|
 
+|Execution Scheduler||
+|---|---|
+|...|...|
 
+|Configuration||
+|---|---|
+|...|...|
 
+|Filter||
+|---|---|
+|...|...|
 
+|Converter||
+|---|---|
+|...|...|
 
+|Cluster||
+|---|---|
+|...|...|
 
+|Partition||
+|---|---|
+|...|...|
 
+|Failure Handler||
+|---|---|
+|...|...|
